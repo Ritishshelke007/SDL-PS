@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>facebook signup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div
+      style="
+        height: 60px;
+        background: #4867aa;
+        display: flex;
+        justify-content: center;
+      "
+    >
+      <p style="font-size: 32px; font-weight: 800; color: white; padding: 10px">
+        facebook
+      </p>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        width: 100%;
+        gap: 20px;
+      "
+    >
+      <div style="width: 500px">
+        <p style="font-size: 35px; font-weight: 700">
+          Connect with friends and world around you
+        </p>
+      </div>
+
+      <div>
+        <p style="font-size: 32px; margin-top: 20px">Sign up</p>
+
+        <form class="form" id="form">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+            "
+          >
+            <div class="form-control">
+              <input type="text" placeholder="First Name" id="firstname" />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <input type="text" placeholder="Last Name" id="lastname" />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error Message</small>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <input type="email" placeholder="Email address" id="email" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="tel" placeholder="Phone number" id="phone" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="password" placeholder="Password" id="password" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+
+          <div style="padding-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+            <label style="font-size: 18px;">Birth Date: </label>
+            	<select class="pd_birth">
+							<option hidden="">Month</option>
+							<option>Jan</option>
+							<option>Fab</option>
+							<option>Mar</option>
+							<option>Apr</option>
+							<option>May</option>
+							<option>Jun</option>
+							<option>Jul</option>
+							<option>Aug</option>
+							<option>Sep</option>
+							<option>Nov</option>
+							<option>Dec</option>
+						</select>
+						<select class="pd_birth">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+							<option>22</option>
+							<option>23</option>
+							<option>24</option>
+							<option>25</option>
+							<option>26</option>
+							<option>27</option>
+							<option>28</option>
+							<option>29</option>
+							<option>30</option>
+							<option>31</option>
+						</select>
+						<select class="pd_birth">
+							<option>2018</option>
+							<option>2017</option>
+							<option>2016</option>
+							<option>2015</option>
+							<option>2014</option>
+							<option>2013</option>
+							<option>2012</option>
+							<option>2011</option>
+							<option>2010</option>
+							<option>2009</option>
+							<option>2008</option>
+							<option>2007</option>
+							<option>2006</option>
+							<option>2005</option>
+							<option>2004</option>
+							<option>2003</option>
+							<option>2002</option>
+							<option>2001</option>
+							<option>2000</option>
+						</select>
+          </div>
+
+          <div style="font-size: 20px; display: flex; justify-content: start; gap: 20px; padding-bottom: 20px;">
+            <div style="border: 1px solid gray; padding: 8px; border-radius: 5px;">
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" value="male" checked>
+            </div>
+            <div style="border: 1px solid gray; padding: 8px; border-radius: 5px;">
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" value="female">
+            </div>
+      </fieldset>
+          </div>
+
+          <button>Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
