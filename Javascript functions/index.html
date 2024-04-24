@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      #eventLog {
+        margin-top: 20px;
+        padding: 16px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <h1>Event Handling Demo</h1>
+
+      <form id="myForm">
+        <input type="text" id="name" name="name" placeholder="Enter name" />
+        <button type="submit">Submit</button>
+      </form>
+
+      <button id="myButton">Click Me</button>
+
+      <div id="eventLog">Event will be displayed here!</div>
+    </div>
+
+    <script>
+      function handleFocus() {
+        var eventLog = document.getElementById("eventLog");
+        eventLog.innerText = "Input field focused!";
+      }
+
+      function handleBlur() {
+        var eventLog = document.getElementById("eventLog");
+        eventLog.innerText = "Input field blurred!";
+      }
+
+      var inputfield = document.getElementById("name");
+      inputfield.addEventListener("focus", handleFocus);
+      inputfield.addEventListener("blur", handleBlur);
+      // Function to handle form submission
+      function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var name = document.getElementById("name").value;
+
+        var eventLog = document.getElementById("eventLog");
+        eventLog.innerText = "Form submitted with name: " + name;
+      }
+
+      // Attach event listener to the form
+      var form = document.getElementById("myForm");
+      form.addEventListener("submit", handleSubmit);
+
+      // Function to handle button click event
+      function handleClick() {
+        var eventLog = document.getElementById("eventLog");
+        eventLog.innerText = "Button clicked!";
+      }
+
+      // Attach event listener to the button
+      var button = document.getElementById("myButton");
+      button.addEventListener("click", handleClick);
+
+      // Function to handle key press event
+      function handleKeyPress(event) {
+        var eventLog = document.getElementById("eventLog");
+        eventLog.innerText = "Key pressed: " + event.key;
+      }
+
+      // Attach event listener to document for key press
+      document.addEventListener("keypress", handleKeyPress);
+
+      // Function to handle mouse hover event
+      function handleMouseOver() {
+        var eventLog = document.getElementById("eventLog");
+        eventLog.innerText = "Mouse hovered over button!";
+      }
+
+      // Attach event listener to the button for mouse hover
+      button.addEventListener("mouseover", handleMouseOver);
+    </script>
+  </body>
+</html>
