@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  padding: 34px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+}
